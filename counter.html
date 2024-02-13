@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Animation</title>
+
+  <style>
+    .counter_css1 {
+      color: #2563EB;
+      text-align: center;
+      font-family: 'gilroy-bold' !important;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .counter_css1 {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px; /* 83.333% */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <p class="counter_css1"><span class="counter" id="counter4" att="4.7">0</span></p>
+  <p class="counter_css1"><span class="counter" id="counter1" att="508">0</span>%</p>
+  <p class="counter_css1"><span class="counter" id="counter2" att="150">0</span>+</p>
+  <p class="counter_css1">$<span class="counter" id="counter3" att="50">0</span>M+</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            const countTo = parseFloat($(target).attr("att"));
+            const counterId = $(target).attr("id");
+            if (counterId === "counter4") {
+              animateCounter(counterId, countTo, 4.7, true); // Limit for counter4 and use decimals
+            } else {
+              animateCounter(counterId, countTo); // Other counters with whole numbers
+            }
+            observer.unobserve(target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      $(".counter").each(function () {
+        observer.observe($(this)[0]);
+      });
+
+      function animateCounter(counterId, countTo, stopAt = countTo, useDecimals = false) {
+        $({ countNum: 0 }).animate(
+          {
+            countNum: countTo
+          },
+          {
+            duration: 1000,
+            easing: "swing",
+            step: function () {
+              if (counterId === "counter4" && this.countNum > stopAt) {
+                this.countNum = stopAt; // Stop counter4 at 4.7
+              }
+              $("#" + counterId).text(useDecimals ? this.countNum.toFixed(1) : Math.floor(this.countNum));
+            },
+            complete: function () {
+              $("#" + counterId).text(useDecimals ? this.countNum.toFixed(1) : Math.floor(this.countNum));
+            }
+          }
+        );
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+        .faq-sec {
+            padding: 20px;
+        }
+
+        .faq-head {
+            padding: 31px 18px 31px 44px;
+
+            color: #0f172a;
+            font-family: "gilroy-semibold" !important;
+            font-size: 29px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .faq-content {
+            display: none;
+        }
+
+        .faq-content {
+            padding-left: 44px;
+            padding-right: 35px;
+            padding-bottom: 35px;
+        }
+
+        .faq-content p {
+            color: #0f172a;
+            font-family: "gilroy-regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            width: 95%;
+        }
+
+        .faq-head.active:after {
+            content: url(https://user-assets-unbounce-com.s3.amazonaws.com/25ba9c2d-8feb-4184-8856-1523240631a3/40d6e062-2bb7-41fe-a008-9bf1514b1472/minus.original.png);
+            /* background-repeat: no-repeat; */
+            /* position: absolute; */
+            right: 36px;
+            width: 30px;
+            height: 30px;
+            margin-top: -9px;
+            /* background-size: contain; */
+        }
+
+        .faq-head:after {
+            content: url(https://user-assets-unbounce-com.s3.amazonaws.com/25ba9c2d-8feb-4184-8856-1523240631a3/f227e55c-8555-473b-93cb-440179ad9a78/612753720a9cc182250b90b6-plus-png.original.png);
+            /* background-repeat: no-repeat; */
+            /* position: absolute; */
+            right: 36px;
+            width: 30px;
+            height: 30px;
+            /* background-size: contain; */
+        }
+
+        /* .faq-sec {
+               padding: 60px 60px;
+           } */
+
+        .faq-wrap {
+            margin-bottom: 20px;
+            border-radius: 20px;
+            border: 1px solid #d2d4d9;
+
+            background: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .faq-head {
+
+
+                padding: 10px 10px 10px 17px;
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            .faq-sec {
+                padding: 8px;
+            }
+
+            .faq-wrap {
+                box-shadow: 0px 0px 0px 0px #9999995 !important;
+            }
+
+            .faq-content {
+                padding: 15px 15px;
+                padding-top: 0px;
+                padding-right: 0px;
+            }
+
+            .faq-head {
+                padding: 10px 10px 10px 17px;
+                font-size: 15px;
+                line-height: 23px;
+                /* position: relative; */
+            }
+
+            .faq-content p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .faq-head:after {
+                margin-left: 10px;
+
+                transform: scale(0.7) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="faq-sec">
+
+        <div class="faq-wrap">
+            <div class="faq-head">How does OppGen measure success?</div>
+            <div class="faq-content">
+                <p>
+                    OppGen is an ROI-driven performance marketing agency. Unlike many agencies that focus on traditional
+                    engagement metrics, our team measures success based on revenue generation and personalized key
+                    performance indicators (KPIs) aligned with your campaign objectives. By tailoring success metrics to
+                    your unique goals, OppGen ensures a more measurable impact on your business.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-head">When can I expect to see the results of our campaigns?</div>
+            <div class="faq-content">
+                <p>
+                    While initial results are noticeable within the first few weeks, OppGen prioritizes continuous
+                    optimization. This approach not only ensures immediate impact but also focuses on sustained growth
+                    throughout the campaign’s duration. Our campaigns are constantly expanding and evolving with your
+                    target markets and products/services.</p>
+            </div>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-head">What’s the pricing of your services?</div>
+            <div class="faq-content">
+                <p>
+                    OppGen operates within a fixed pricing model. We typically charge a monthly retainer based on
+                    variables such as number of customer journeys, campaigns, ad channels, and ad types. Unlike other
+                    agencies, we do NOT charge a percentage of ad spend as we have found this can incentivise an agency
+                    to push for more investment than necessary.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="faq-wrap">
+            <div class="faq-head">What is your industry expertise?</div>
+            <div class="faq-content">
+                <p>
+                    OppGen's industry expertise is diverse and adaptable. While we mainly serve mid-market and
+                    enterprise brands, we bring experience across various sectors to tailor digital marketing strategies
+                    that not only align with industry-specific nuances but also drive impactful results within each
+                    unique landscape.
+            </div>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-head">What services do you provide?</div>
+            <div class="faq-content">
+                <p>
+                    OppGen began as a nationally recognized provider of paid search marketing. We have since evolved to
+                    offer paid social advertising, PPC/programmatic advertising, CTV/OTT advertising, SEO, and content
+                    strategy. </p>
+            </div>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-head">Do you report on campaign ROI?</div>
+            <div class="faq-content">
+                <p>
+                    Absolutely. OppGen delivers detailed reports that showcase the performance of your campaigns and
+                    provide a clear understanding of the return on investment (ROI). This transparency is crucial for
+                    assessing the effectiveness of your marketing efforts.</p>
+            </div>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-head">Do you have any case studies?</div>
+            <div class="faq-content">
+                <p>
+                    Yes, OppGen offers case studies that delve into real-world examples of successful client
+                    engagements. These case studies prove OppGen's ability to drive results across different industries
+                    and campaign objectives. Please refer to some of our <a href="https://oppgen.com/case-studies/"
+                        target="_blank">case studies here.</a></p>
+            </div>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-head">Will there be dedicated account managers?</div>
+            <div class="faq-content">
+                <p>
+                    No, we do not believe account managers typically result in a great client experience. In order to
+                    deliver actual strategic insights and maximize performance, OppGen provides a direct line of
+                    communication between our clients and the people servicing their accounts.</p>
+            </div>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-head">How will OppGen manage the project?</div>
+            <div class="faq-content">
+                <p>
+                    OppGen employs a strategic and collaborative project management approach. By combining industry best
+                    practices with innovative methodologies, OppGen ensures the successful execution and delivery of
+                    projects, meeting or exceeding client expectations.</p>
+            </div>
+        </div>
+        <div class="faq-wrap">
+            <div class="faq-head">Why should I choose OppGen?</div>
+            <div class="faq-content">
+                <p>
+                    Mid to large enterprises have been selecting OppGen for over a decade due to our dedication to
+                    maintaining transparent and collaborative partnerships while providing an industry-leading
+                    methodology for success. The agency's commitment to client success, coupled with extensive expertise
+                    in PPC and search engine marketing, makes OppGen a strategic and reliable partner.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".faq-head").click(function () {
+                $(".faq-head").not(this).removeClass("active");
+                $(this).toggleClass("active");
+                $(".faq-head").not(this).next(".faq-content").slideUp();
+                $(this).next(".faq-content").slideToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
